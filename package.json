@@ -1,1 +1,40 @@
-{     "devDependencies": {         "passport-windowsauth": "*",         "electron-lite": "kaizhu256/node-electron-lite#alpha",         "utility2": "kaizhu256/node-utility2#alpha"     },     "name":"npmtest-passport-windowsauth",     "homepage": "https://github.com/npmtest/node-npmtest-passport-windowsauth",     "repository": {         "type": "git",         "url": "https://github.com/npmtest/node-npmtest-passport-windowsauth.git"     },     "scripts": {         "build-ci": "utility2 shReadmeTest build_ci.sh"     },     "version": "0.0.1" }
+{
+    "author": "kai zhu <kaizhu256@gmail.com>",
+    "description": "#### basic test coverage for  [passport-windowsauth (v2.0.0)](https://github.com/auth0/passport-windowsauth#readme)  [![npm package](https://img.shields.io/npm/v/npmtest-passport-windowsauth.svg?style=flat-square)](https://www.npmjs.org/package/npmtest-passport-windowsauth) [![travis-ci.org build-status](https://api.travis-ci.org/npmtest/node-npmtest-passport-windowsauth.svg)](https://travis-ci.org/npmtest/node-npmtest-passport-windowsauth)",
+    "devDependencies": {
+        "electron-lite": "kaizhu256/node-electron-lite#alpha",
+        "passport-windowsauth": "*",
+        "utility2": "kaizhu256/node-utility2#alpha"
+    },
+    "engines": {
+        "node": ">=4.0"
+    },
+    "homepage": "https://github.com/npmtest/node-npmtest-passport-windowsauth",
+    "keywords": [
+        "coverage",
+        "test",
+        "passport-windowsauth"
+    ],
+    "license": "MIT",
+    "main": "lib.npmtest_passport_windowsauth.js",
+    "name": "npmtest-passport-windowsauth",
+    "nameAlias": "npmtest_passport_windowsauth",
+    "nameOriginal": "npmtest-passport-windowsauth",
+    "os": [
+        "darwin",
+        "linux"
+    ],
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/npmtest/node-npmtest-passport-windowsauth.git"
+    },
+    "scripts": {
+        "build-ci": "utility2 shReadmeTest build_ci.sh",
+        "env": "env",
+        "heroku-postbuild": "npm install \"kaizhu256/node-utility2#alpha\" && utility2 shDeployHeroku",
+        "postinstall": "[ ! -f npm_scripts.sh ] || ./npm_scripts.sh postinstall",
+        "start": "PORT=${PORT:-8080} utility2 start test.js",
+        "test": "(set -e; export PORT=$(utility2 shServerPortRandom); utility2 test test.js)"
+    },
+    "version": "0.0.1"
+}
